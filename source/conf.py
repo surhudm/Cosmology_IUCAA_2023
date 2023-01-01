@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Cosmology IUCAA 2022'
-copyright = '2022, Surhud More'
+project = 'Cosmology IUCAA 2023'
+copyright = '2023, Surhud More'
 author = 'Surhud More'
 
 # The full version, including alpha/beta/rc tags

@@ -3,8 +3,8 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Cosmology IUCAA 2022's documentation!
-================================================
+Welcome to the homepage of the Graduate school course on Cosmology@IUCAA in 2023!
+=================================================================================
 
 .. toctree::
    :maxdepth: 2

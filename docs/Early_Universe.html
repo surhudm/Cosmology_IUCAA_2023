@@ -60,6 +60,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#Reference-material-for-reading-about-the-cosmic-microwave-background:">Reference material for reading about the cosmic microwave background:</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#Problems-with-the-standard-cosmological-model">Problems with the standard cosmological model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Flatness-problem">Flatness problem</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Horizon-problem">Horizon problem</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#Inflation-as-a-solution">Inflation as a solution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Inhomogeneous_Universe.html">The inhomogeneous Universe</a></li>
@@ -374,10 +380,15 @@ radiation. Assuming a black body nature for this radiation with temperature <spa
 <p>The temperature of the Universe is thus inversely proportional to the scale factor, which implies that the Universe had a higher temperature at earlier epochs. Given that in the radiation dominated era, <span class="math notranslate nohighlight">\(a \propto t^{1/2}\)</span> where <span class="math notranslate nohighlight">\(t\)</span> is the time, we obtain a relation between temperature and time <span class="math notranslate nohighlight">\(T \propto t^{-1/2}\)</span>.</p>
 <div class="admonition note">
 <p class="admonition-title fa fa-exclamation-circle">Exercise:</p>
-<ul class="simple">
+<ul>
 <li><p>Show that: <span class="math">\begin{equation}
-T \sim 1.5 \times 10^{10} \left[\frac{t}{\rm second}\right]^{-1/2}
-\end{equation}</span> where <span class="math notranslate nohighlight">\(t=0\)</span> is defined to be the time when the scale factor <span class="math notranslate nohighlight">\(a(t) = 0\)</span>.</p></li>
+T \sim 1.5 \times 10^{10} K \left[\frac{t}{\rm second}\right]^{-1/2}
+\end{equation}</span> where <span class="math notranslate nohighlight">\(t=0\)</span> is defined to be the time when the scale factor <span class="math notranslate nohighlight">\(a(t) = 0\)</span>, and equivalently, :nbsphinx-math:<a href="#id1"><span class="problematic" id="id2">`</span></a>begin{equation}</p>
+<blockquote>
+<div><p>T= 1,text{MeV}, left[frac{t}{1 s}right]^{-frac{1}{2}}</p>
+</div></blockquote>
+<p>end{equation}` These equations are valid in the radiation dominated era.</p>
+</li>
 </ul>
 </div>
 <p>In the earliest time in the Universe, when the temperature was of the order of <span class="math notranslate nohighlight">\(10^{16} {\rm K} \sim 1 {\rm TeV}\)</span>, the Universe was full of elementary particles in the standard model, all in thermal equilibrium because of the high rate of interactions. The particle production and annihilation processes operate in equilibrium to keep a steady state abundance (<span class="math notranslate nohighlight">\(na^3\)</span>) of these particles. However as the temperature of the Universe fell due to the expansion, the production rate is not
@@ -395,7 +406,7 @@ densities fall as <span class="math notranslate nohighlight">\(a^{-3}\)</span>. 
 <p>One can compute the number density, energy density, pressure and entropy density of particles in thermal equilibrium using the equations</p>
 <p><span class="math">\begin{eqnarray}
 n_{\rm X} &=& \int_0^{\infty} f_{\rm X} dp =   \int_0^{\infty} \frac{g_{\rm X}}{2\pi^2 \hslash^3} p^2 \left[ \exp\left( \frac{E_{\rm X}}{k_{\rm B}T}\right) \pm 1 \right]^{-1} dp \\
-\rho_{\rm x} c^2 =\epsilon_{\rm X} &=& \int_0^{\infty} E_{\rm X}(p) f_{\rm X} dp = \int_0^{\infty} (p_{\rm X}^2c^2+m_{\rm X}^2c^4)^{1/2} \frac{g_{\rm X}}{2\pi^2 \hslash^3} p^2 \left[ \exp\left( \frac{E_{\rm X}}{k_{\rm B}T}\right) \pm 1 \right]^{-1} dp \\
+\rho_{\rm x} c^2 =\epsilon_{\rm X} &=& \int_0^{\infty} E_{\rm X}(p) f_{\rm X} dp = \int_0^{\infty} (p^2c^2+m_{\rm X}^2c^4)^{1/2} \frac{g_{\rm X}}{2\pi^2 \hslash^3} p^2 \left[ \exp\left( \frac{E_{\rm X}}{k_{\rm B}T}\right) \pm 1 \right]^{-1} dp \\
 P_{\rm X} &=& \int_0^{\infty} \frac{p^2 c^2}{3 E_{\rm X}} f_{\rm X} dp = \int_0^{\infty}  \frac{p^2 c^2}{3 (p^2c^2+m_{\rm X}^2c^4)^{1/2} }  \frac{g_{\rm X}}{2\pi^2 \hslash^3} p^2 \left[ \exp\left( \frac{E_{\rm X}}{k_{\rm B}T}\right) \pm 1 \right]^{-1} dp  \\
 s_{\rm X} &=& \left( P_{\rm X} + \epsilon_{\rm X} \right) /T
 \end{eqnarray}</span></p>
@@ -530,7 +541,7 @@ s_{\rm X} &=& g^*_{s, {\rm X}} s^{\rm rel}_{\rm B}(g=1, T) \\
 g^*_{s, {\rm X}} = \frac{3 g^{*}_{\epsilon, {\rm X}} + g^{*}_{p, {\rm X}}}{4} \\
 \end{eqnarray}</span></p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">quad</span>
@@ -563,20 +574,7 @@ g^*_{s, {\rm X}} = \frac{3 g^{*}_{\epsilon, {\rm X}} + g^{*}_{p, {\rm X}}}{4} \\
     <span class="c1"># Write code for the following functions:</span>
     <span class="k">def</span> <span class="nf">effective_dof_eps</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">T_in_GeV</span><span class="p">):</span>
 
-        <span class="n">curlyM</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">mass_in_Gev</span><span class="o">/</span><span class="n">T_in_GeV</span>
-
-        <span class="c1"># Compute the number density effective degrees of freedom</span>
-        <span class="k">def</span> <span class="nf">depsx_integ</span><span class="p">(</span><span class="n">curlyE</span><span class="p">):</span>
-            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">boson</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">curlyE</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">curlyE</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">curlyM</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">curlyE</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
-            <span class="k">else</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">curlyE</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">curlyE</span><span class="o">**</span><span class="mi">2</span><span class="o">-</span><span class="n">curlyM</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">curlyE</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-
-        <span class="n">res</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">quad</span><span class="p">(</span><span class="n">depsx_integ</span><span class="p">,</span> <span class="n">curlyM</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
-
-        <span class="k">return</span> <span class="mf">15.</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">4</span> <span class="o">*</span> <span class="n">res</span>
-
-        <span class="c1"># Write code to compute the pressure density effective degrees of freedom</span>
+        <span class="c1"># Write code to compute the entropy density effective degrees of freedom</span>
         <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
 
         <span class="k">return</span> <span class="n">result</span>
@@ -591,7 +589,7 @@ g^*_{s, {\rm X}} = \frac{3 g^{*}_{\epsilon, {\rm X}} + g^{*}_{p, {\rm X}}}{4} \\
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -619,14 +617,14 @@ g^*_{s, {\rm X}} = \frac{3 g^{*}_{\epsilon, {\rm X}} + g^{*}_{p, {\rm X}}}{4} \\
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-&lt;ipython-input-5-6fb9b67221ab&gt;:19: RuntimeWarning: overflow encountered in exp
+/tmp/ipykernel_49068/1348046578.py:19: RuntimeWarning: overflow encountered in exp
   return curlyE*np.sqrt(curlyE**2-curlyM**2)/(np.exp(curlyE)-1)
-&lt;ipython-input-5-6fb9b67221ab&gt;:21: RuntimeWarning: overflow encountered in exp
+/tmp/ipykernel_49068/1348046578.py:21: RuntimeWarning: overflow encountered in exp
   return curlyE*np.sqrt(curlyE**2-curlyM**2)/(np.exp(curlyE)+1)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">boson</span><span class="o">.</span><span class="n">effective_dof_n</span><span class="p">(</span><span class="mf">173.0</span><span class="p">))</span>
@@ -640,7 +638,7 @@ g^*_{s, {\rm X}} = \frac{3 g^{*}_{\epsilon, {\rm X}} + g^{*}_{p, {\rm X}}}{4} \\
 <div class="output_area docutils container">
 <div class="highlight"><pre>
 0.739577680156012
-0.6579236598659057
+0
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -648,14 +646,12 @@ g^*_{s, {\rm X}} = \frac{3 g^{*}_{\epsilon, {\rm X}} + g^{*}_{p, {\rm X}}}{4} \\
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-&lt;ipython-input-5-6fb9b67221ab&gt;:19: RuntimeWarning: overflow encountered in exp
+/tmp/ipykernel_49068/1348046578.py:19: RuntimeWarning: overflow encountered in exp
   return curlyE*np.sqrt(curlyE**2-curlyM**2)/(np.exp(curlyE)-1)
-&lt;ipython-input-5-6fb9b67221ab&gt;:36: RuntimeWarning: overflow encountered in exp
-  return curlyE**2*np.sqrt(curlyE**2-curlyM**2)/(np.exp(curlyE)-1)
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pylab</span> <span class="k">as</span> <span class="nn">pl</span>
@@ -678,7 +674,7 @@ g^*_{s, {\rm X}} = \frac{3 g^{*}_{\epsilon, {\rm X}} + g^{*}_{p, {\rm X}}}{4} \\
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -694,7 +690,7 @@ g^*_{s, {\rm X}} = \frac{3 g^{*}_{\epsilon, {\rm X}} + g^{*}_{p, {\rm X}}}{4} \\
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Now plot on log scale</span>
@@ -717,7 +713,7 @@ g^*_{s, {\rm X}} = \frac{3 g^{*}_{\epsilon, {\rm X}} + g^{*}_{p, {\rm X}}}{4} \\
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -919,19 +915,52 @@ l_{\rm first peak} \approx \frac{200}{\sqrt{1-\Omega_{\rm k}}}
 <section id="Reference-material-for-reading-about-the-cosmic-microwave-background:">
 <h3>Reference material for reading about the cosmic microwave background:<a class="headerlink" href="#Reference-material-for-reading-about-the-cosmic-microwave-background:" title="Permalink to this headline"></a></h3>
 <p>Excellent material can be found on Wayne Hu’s CMB tutorial page: <a class="reference external" href="http://background.uchicago.edu/~whu/beginners/introduction.html">Beginner level introduction</a> followed by <a class="reference external" href="http://background.uchicago.edu/~whu/intermediate/intermediate.html">Intermediate level</a> and a review article in <a class="reference external" href="http://background.uchicago.edu/~whu/SciAm/sym1.html">Scientific American</a> .</p>
-<p><span class="math">\begin{equation}
-\frac{dP_{\rm X}}{dT} = \frac{P_{\rm X}+\epsilon_{\rm X}}{T}
-\end{equation}</span> First differentiate the pressure expression with respect to <span class="math notranslate nohighlight">\(T\)</span>, change the variable from <span class="math notranslate nohighlight">\(p\)</span> to <span class="math notranslate nohighlight">\(E\)</span> and then integrate the expression by parts using the formula <span class="math">\begin{equation}
-\int u v dw = uvw - \int u w dv - \int v w du
-\end{equation}</span> Then use this in combination with <span class="math">\begin{equation}
-\frac{d}{dt}\left[ a^3 \rho c^2 \right] + p \frac{d}{dt}\left[ a^3 \right] = 0
-\end{equation}</span> to show that the entropy density of the Universe is conserved. <span class="math">\begin{equation}
-\frac{d}{dt}(a^3 s) = 0
-\end{equation}</span></p>
-<p><span class="math">\begin{equation}
-T= 1\,\text{MeV}\, \left[\frac{t}{1 s}\right]^{-\frac{1}{2}}
-\end{equation}</span></p>
 </section>
+</section>
+<section id="Problems-with-the-standard-cosmological-model">
+<h2>Problems with the standard cosmological model<a class="headerlink" href="#Problems-with-the-standard-cosmological-model" title="Permalink to this headline"></a></h2>
+<section id="Flatness-problem">
+<h3>Flatness problem<a class="headerlink" href="#Flatness-problem" title="Permalink to this headline"></a></h3>
+<p>The geometry of the Universe as observed today is pretty close to flat. To observe that this is quite a coincidence, note that today the densities in the Universe have to be finely tuned such that the difference between the sum of the matter density, the dark energy density and the radiation energy density (let us call this sum <span class="math notranslate nohighlight">\(\rho\)</span>) is equal to the critical density within less than a percent. The Friedmann equation can be recast as <span class="math">\begin{align}
+\frac{3 kc^2 }{8\pi G \rho(a) a^2} &= \frac{\rho(a)-\rho_{\rm c}(a)}{\rho(a)}
+\end{align}</span> where <span class="math notranslate nohighlight">\(\rho\)</span> is the total energy density of the Universe.</p>
+<p>In the matter dominated era, the density goes as <span class="math notranslate nohighlight">\(\rho \propto a^{-3}\)</span>, and so the left hand side will grow as <span class="math notranslate nohighlight">\(a\)</span>, while in the radiation dominated era, the density goes as <span class="math notranslate nohighlight">\(\rho \propto a^{-4}\)</span>, and the difference in the density compared to critical will grow as <span class="math notranslate nohighlight">\(a^2\)</span>. This implies that the total energy density of the Universe will have to be incredibly fine tuned in the very early Universe to be close to critical if it has to be equal to the critical density within a
+percent today.</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">Exercise:</p>
+<p>– We know from observations that the Universe has a density which is within one percent of the critical density today. Compute how close to the critical density the Universe needs to be when it was 50000 years old, assuming that the Universe is entirely matter dominated from then to today. Use the relation between the scale factor and time in the matter dominated era.</p>
+<p>– The Universe is radiation dominated prior to that time, compute how close the energy density have to be when extrapolated to 1 s after the big bang.</p>
+</div>
+<p>This is called the flatness problem.</p>
+</section>
+<section id="Horizon-problem">
+<h3>Horizon problem<a class="headerlink" href="#Horizon-problem" title="Permalink to this headline"></a></h3>
+<p>Consider cosmic microwave background photons arriving from opposite direction in the sky. These photons are just arriving today at our location. So the regions which emitted these photons should not have been in causal contact with each other in the very early Universe. Given this it is difficult to understand how these photons manage to have the same temperature to 1 part in 100000?</p>
+<div class="admonition note">
+<p class="admonition-title fa fa-exclamation-circle">Exercise:</p>
+<p>– Compute the comoving distance to the horizon at the time the cosmic microwave background photons were released. Most of the time spent in the early Universe is in the matter dominated era. The CMB photons were released about 480000 years after the big bang. Hint: Use the formula for the scale factor as a function of time in matter dominated era and the definition of the comoving horizon distance.</p>
+<p>– Compare this distance to the distance between two points which released the CMB photons which reached today to us from opposite directions.</p>
+</div>
+<p>The large difference between these two distances is known as the horizon problem.</p>
+</section>
+</section>
+<section id="Inflation-as-a-solution">
+<h2>Inflation as a solution<a class="headerlink" href="#Inflation-as-a-solution" title="Permalink to this headline"></a></h2>
+<p>An epoch of an exponential expansion in the early Universe has been invoked as a solution to these problems. The comoving horizon distance in a Universe which undergoes an exponential expansion, is given by</p>
+<p><span class="math">\begin{align}
+\chi &= \int_{0}^t c \frac{dt}{a(t)} \\
+&= \int_{0}^{t} e^{-H_0 t} c dt\\
+&= \frac{c}{H_0} \left[1 - e^{-H_0 t}\right]
+\end{align}</span> The exponential will die down fairly quickly if inflation lasts many e-folds. The comoving horizon thus does not grow significantly during periods of exponential expansion. However the physical distances grow exponentially. Thus distances which are in causal contact, can be stretched to distances larger than the comoving horizon during the period of inflation. Inflation thus solves the horizon problem, by positing that the entire observable Universe was once part of a causal patch,
+which grew exponentially during the early inflationary epoch.</p>
+<p>Inflation can also solve the fine tuning problem. Note that during inflationary epoch the energy density will stay constant. Thus the quantity <span class="math notranslate nohighlight">\(\delta\rho/\rho\)</span> where <span class="math notranslate nohighlight">\(\delta\rho\)</span> is the difference between the critical density and the density of the Universe can decay exponentially. Inflation drives the Universe towards the critical density.</p>
+<p>Inflation also is able to provide a solution to the non-existence of magnetic monopoles (such monopoles are regular features in quantum theories of the early Universe). Such monopoles get diluted exponentially during the inflationary epoch.</p>
+<p>More importantly inflation also provides an explanation for the seeds of structure formation. The quantum fluctuations in the early Universe can get stretched to scales beyond the horizon during inflation and result in structure formation.</p>
+<p>Inflation is posited to happen due to a scalar field called the inflaton which exists in the early Universe. The inflaton field has an energy density and pressure which can be computed by starting from an action. <span class="math">\begin{align}
+\rho &= \frac{1}{2}\dot{\phi}^2 + V(\phi) \\
+p &= \frac{1}{2}\dot{\phi}^2 - V(\phi)
+\end{align}</span> where <span class="math notranslate nohighlight">\(V(\phi)\)</span> is the potential which governs the dynamics of the inflaton field. The field is homogeneous in the Universe, but is expected to have quantum fluctuations at different locations in the Universe. If the field is static or rolling slowly (<span class="math notranslate nohighlight">\(\dot{\phi}^2&lt;&lt; 2 V(\phi)\)</span>), then we get an equation of state <span class="math notranslate nohighlight">\(p=-\rho\)</span>. We have previously seen that this corresponds to an exponential expansion of the scale factor.</p>
+<p>There are different potentials which have been proposed, but most inflationary models these days will show a potential which has a false vacuum at <span class="math notranslate nohighlight">\(\phi=0\)</span> with a finite <span class="math notranslate nohighlight">\(V(0)\)</span>. This potential drives the inflation as the field rolls slowly towards the true minima. Once it reaches the minimum, then the inflaton can decay into radiation and particles in a mechanism called reheating.</p>
 </section>
 </section>
 

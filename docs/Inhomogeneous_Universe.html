@@ -48,6 +48,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#The-origin-of-fluctuations">The origin of fluctuations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Spherical-collapse-of-a-top-hat-perturbation">Spherical collapse of a top hat perturbation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#Formation-and-statistics-of-dark-matter-halos">Formation and statistics of dark matter halos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#The-bias-of-dark-matter-halos">The bias of dark matter halos</a></li>
 </ul>
 </li>
 </ul>
@@ -568,6 +569,10 @@ this problem was first presented by Chandrasekhar some time before (he was not s
 <p>The Press Schechter mass function qualitatively reproduces the halo mass function observed in simulations, you see a power law at the low mass end, and an exponential drop off at the massive end. There have been many advances in understanding the halo mass function theoretically with more quantitative success: in particular the use of ellipsoidal collapse rather than spherical collapse to set the critical threshold for collapse (e.g., Sheth, Mo, Tormen 1999, 2001), stochasticity in the critical
 threshold (e.g., Corasaniti et al 2011), statistics of peaks (Paranjape et al. 2013). However, these approaches often lead to better functional forms whose free parameters are tuned in order to fit the halo mass function in arbitrary cosmologies.</p>
 <p>The mass function appears fairly universal, but there are small deviations and these have been now well characterized with the help of numerical simulations. Fitting functions or interpolation routines that can compute the mass function for a given mass and redshift are available. The following figure from Tinker et al. (2008) shows a comparison between the halo mass function as measured from numerical simulations and the Press Schechter mass function.</p>
+<p>The mass function can also be written as <span class="math">\begin{equation}
+n(M) \equiv \frac{d}{dM} n(>M)
+\propto \frac{\bar\rho}{M^2} \nu \exp\left(-\frac{\nu^2}{2}\right)\left|\frac{d\ln\sigma}{d\ln M}\right|
+\end{equation}</span> where we have defined the peak height <span class="math notranslate nohighlight">\(\nu=\delta_{\rm c}/\sigma(M)\)</span>. The peak height tells how big is <span class="math notranslate nohighlight">\(\delta_{\rm c}\)</span> with respect to the rms of the fluctuations of scales of mass <span class="math notranslate nohighlight">\(M\)</span>. The bigger the rms fluctuation, the more abundant halos of that mass.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
@@ -586,6 +591,28 @@ threshold (e.g., Corasaniti et al 2011), statistics of peaks (Paranjape et al. 
 <img alt="_images/Inhomogeneous_Universe_6_0.png" class="no-scaled-link" src="_images/Inhomogeneous_Universe_6_0.png" style="width: 600px;" />
 </div>
 </div>
+</section>
+<section id="The-bias-of-dark-matter-halos">
+<h2>The bias of dark matter halos<a class="headerlink" href="#The-bias-of-dark-matter-halos" title="Permalink to this headline"></a></h2>
+<p>There are fluctuations in the Universe on a variety of scales. The rms of larger scale fluctuations is smaller than that of small scale fluctuations. However it can affect the number of halos that fall in a patch of the Universe which has this large scale fluctuation in it.</p>
+<p>Consider a large patch of the Universe which has an overdensity today <span class="math notranslate nohighlight">\(\delta_0\)</span>. Given that this is a large patch of the Universe we expect <span class="math notranslate nohighlight">\(\delta_0\)</span> to be very similar to its linearly extrapolated value from the initial overdensity field. Now let us consider the mass function of halos of mass <span class="math notranslate nohighlight">\(M\)</span>. These form out of overdensities of much smaller scales <span class="math notranslate nohighlight">\(\delta_1\)</span>. Because these fluctuations are sitting on top of a more large scale fluctuation <span class="math notranslate nohighlight">\(\delta_0\)</span>, it is now
+easier for even smaller values of <span class="math notranslate nohighlight">\(\delta_1\)</span> to reach the collapse threshold, <span class="math notranslate nohighlight">\(\delta_{\rm c}\)</span>. The number density of halos of mass <span class="math notranslate nohighlight">\(M\)</span> thus would be <span class="math">\begin{align}
+n(M,z|\delta_0) &\approx n(M, z) - \frac{\partial n}{\partial \delta_{\rm c}} \delta_0 \\
+\delta_{\rm h}^{\rm L} &= \frac{n(M,z|\delta_0) - n(M,z) }{n(M, z)} = -\frac{1}{n}\frac{\partial n}{\partial \delta_{\rm c}} \delta_0
+\end{align}</span> We can write the proportionality constant between the overdensity of halos and overdensity of dark matter in terms of the peak height. <span class="math">\begin{align}
+\frac{1}{n}\frac{\partial n}{\partial \delta_{\rm c}} &= \frac{\partial \ln n}{\partial \delta_{\rm c}} \\
+&= \frac{\partial \ln n}{\partial \delta_{\rm c}} \\
+&= \frac{\partial \ln [\nu f(\nu)]}{\partial \delta_{\rm c}} \\
+&= \left[ \frac{1}{\nu} + \frac{f'(\nu)}{f(\nu)} \right] \frac{\partial \nu}{\partial \delta_{\rm c}} \\
+&= \left[ \frac{1}{\nu} - \nu \right] \frac{\partial \nu}{\partial \delta_{\rm c}} \\
+&= \frac{1-\nu^2}{\sigma \nu}
+\end{align}</span> Therefore <span class="math">\begin{align}
+\delta_{\rm h}^{\rm L} &= \frac{\nu^2-1}{\sigma \nu} \delta_0
+\end{align}</span> This however is the overdensity of halos in Lagrangian space. The number density of halos is modified in a volume which is overdense due to the fluctuation <span class="math notranslate nohighlight">\(\delta_0\)</span> because the comoving volumes in the overdense patch are related to the global lagrangian volume with <span class="math notranslate nohighlight">\(V_0 = V(1+\delta_0)\)</span>. Therefore <span class="math">\begin{align}
+\delta_{\rm h}^{\rm E} &= (1+\delta_{\rm h}^{\rm L})(1+\delta_0) - 1\\
+&= \delta_{\rm h}^{\rm L} + \delta_0 \\
+&= \left[1 + \frac{\nu^2-1}{\sigma \nu}\right] \delta_0
+\end{align}</span></p>
 </section>
 </section>
 
